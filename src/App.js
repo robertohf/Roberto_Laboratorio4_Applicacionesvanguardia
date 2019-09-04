@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SampleComponent from "./components/SampleComponent";
+import Home from "./components/Home";
 import { Provider as ReduxProvider } from "react-redux";
 import  {Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import configureStore from "./modules/store";
@@ -10,8 +10,8 @@ const reduxStore = configureStore(window.REDUX_INITIAL_DATA);
 const routing = (
   <Router>
     <Switch>
-      <Route exact="/" component={SampleComponent}/>
-      <Route component={SampleComponent}/>
+      <Route exact path="/" component={Home}/>
+      <Route component={Home}/>
     </Switch>
   </Router>
 );

@@ -4,6 +4,10 @@ const Types = {
     DELETE_ITEM: "DELETE_ITEM",
     GET_ITEMS: "GET_ITEMS",
     GET_ITEMS_SUCCESS: "GET_ITEMS_SUCCESS",
+    SAVE_STUDENT: "SAVE_STUDENT",
+    SAVE_CLASS: "SAVE_CLASS",
+    GET_INFO: "GET_INFO",
+    GET_INFO_SUCCESS: "GET_INFO_SUCCESS",
   };
   // actions
   const createItem = task => ({
@@ -19,10 +23,29 @@ const Types = {
   const getItems = () => ({
     type: Types.GET_ITEMS
   });
-  
+
+  const saveStudent = (studentName, studentCode) => ({
+    type: Types.SAVE_STUDENT,
+    name: studentName,
+    code: studentCode
+  });
+
+  const saveClass = (className, classCode) => ({
+    type: Types.SAVE_CLASS,
+    name: className,
+    code: classCode
+  });
+
+  const getInfo = () => ({
+    type: Types.GET_INFO
+  });
+
   export default {
     createItem,
     deleteItem,
     getItems,
+    saveStudent,
+    saveClass,
+    getInfo,
     Types
   };
